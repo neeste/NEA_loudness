@@ -1,0 +1,39 @@
+every second sample is used here (stride 2)
+fitted read-out                                            r +0.85  RMSE 1.33 dB | 1 kHz 60 dB -4.3
+broad sum alone                                            r +0.11  RMSE 9.75 dB | 1 kHz 60 dB +8.1
+
+suppression, broad sum alone, one-octave band at 1 kHz and 60 dB, by fraction and width (channels):
+   w 0.10 sig  2: +8.24 dB
+   w 0.10 sig  5: +7.90 dB
+   w 0.10 sig 10: +7.63 dB
+   w 0.20 sig  2: +8.35 dB
+   w 0.20 sig  5: +7.61 dB
+   w 0.20 sig 10: +6.98 dB
+   w 0.35 sig  2: +8.51 dB
+   w 0.35 sig  5: +6.95 dB
+   w 0.35 sig 10: +5.62 dB
+broad sum with suppression (0.35, 10)                      r +0.18  RMSE 7.81 dB | 1 kHz 60 dB +5.6
+fitted read-out with suppression added                     r +0.84  RMSE 6.14 dB
+
+weight gated by the broad sum                              r +0.76  RMSE 2.08 dB (level = 21.09 log10(LE) -65.4, R2 0.941)
+
+constant weight, no gate                                   r +0.70  RMSE 2.41 dB | 1 kHz by level 30..100: -5.4 -4.9 -4.6 -4.4 -4.3 -4.2 -4.1 -4.0
+fitted read-out, 1 kHz by level 30..100:                                            -2.2 -2.5 -3.5 -4.3 -4.5 -4.0 -2.9 -1.7
+data                                                                                -2.0 -4.7 -2.5 -3.7 -5.9 -4.1 -2.2 -1.8
+constant weight, three fiber classes spread x10            r +0.72  RMSE 2.34 dB | 1 kHz by level 30..100: -5.1 -4.8 -4.5 -4.4 -4.3 -4.2 -4.1 -4.0
+constant weight, three fiber classes spread x100           r +0.73  RMSE 2.29 dB | 1 kHz by level 30..100: -4.9 -4.7 -4.5 -4.4 -4.3 -4.2 -4.1 -4.0
+constant weight, three fiber classes spread x1000          r +0.73  RMSE 2.28 dB | 1 kHz by level 30..100: -4.8 -4.6 -4.5 -4.4 -4.3 -4.2 -4.1 -4.0
+
+noise: channel scores for 16 tokens at 10 frequencies in 15 s
+noise bands, fitted parameters                             r +0.85  RMSE 2.33 dB
+noise bands, w0 refitted to 0.74                           r +0.84  RMSE 1.36 dB
+five-tone complexes, w0 refitted to 0.88                   r +0.84  RMSE 1.26 dB
+one octave at 1 kHz, 30..90 dB: noise -3.21 -3.90 -4.91 -5.71 -5.82 -5.17 -4.05 | five-tone -2.18 -2.53 -3.47 -4.30 -4.50 -3.97 -2.92 | difference -1.03 -1.37 -1.44 -1.40 -1.31 -1.20 -1.12
+tokens at 1 kHz and 60 dB: SD of the one-octave value over tokens 0.21 dB; quarter octave: noise -2.75, five-tone -2.79 dB
+
+Leibold et al. (2007), 1 kHz, 60 dB, bandwidths [46 92 231 465 956 2119] Hz
+   data            -3.9  -4.7  -2.2  +0.3  +3.5  +6.8
+   model, w0 0.92  -4.4  -3.3  -3.2  -4.3  -4.5  -3.3  (RMSE 5.66 dB)
+   model, w0 0.48  -3.5  -2.1  -0.4  +1.0  +3.2  +5.4  (RMSE 1.48 dB, the best)
+
+saved nea_letter_extras.json

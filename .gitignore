@@ -1,0 +1,8 @@
+fig_*.plt
+fig_*.svg
+__pycache__/
+.DS_Store
+letter_figures/
+poster/fig/
+nea_letter_params_stage*.mat
+nea_letter_scoremaps.mat

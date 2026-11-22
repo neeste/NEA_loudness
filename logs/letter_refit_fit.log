@@ -1,0 +1,52 @@
+start (committed values with the new filterbank):
+  w0 0.878: one octave r 0.808 RMSE 1.39 dB | quarter octave r 0.596 RMSE 1.63 dB | 1 kHz 60 dB: -3.41, -2.63 | 6 kHz 70 dB: +2.56
+  w0 0.000: one octave r 0.101 RMSE 10.20 dB | quarter octave r -0.084 RMSE 3.98 dB | 1 kHz 60 dB: +8.50, +0.98 | 6 kHz 70 dB: +11.54
+  loudness error (%), constant 4.72e-06, by frequency 250 Hz to 6 kHz:
+   tone       18   18   19   14   26   21   23   22   22
+   quarter    18   13   11   12   17   16   18   19   17
+   octave     23   18   20   21   20   21   26   18   18
+  alpha 0.4273 I0 7.472 q 13.883 w0 0.8778 L0 74.60 Lw 68.01 | G 0.452 0.716 0.861 0.999 1.028 0.937 1.041 1.236 0.848 1.798
+
+stage 1, pass 1 (4 s): alpha 0.4333, I0 25.49 | cost 0.0364, tone growth 8.7%
+stage 2, pass 1 (12 s): w0 0.965, L0 73.77, Lw 70.39 (q held at 13.88) | cost 0.1105, growth 15.1%, influence 1.48 dB
+
+stage 1, pass 2 (2 s): alpha 0.4367, I0 30.23 | cost 0.0379, tone growth 9.1%
+stage 2, pass 2 (12 s): w0 0.972, L0 74.44, Lw 68.03 (q held at 13.88) | cost 0.1136, growth 16.0%, influence 1.48 dB
+
+stage 1, pass 3 (3 s): alpha 0.4407, I0 30.56 | cost 0.0394, tone growth 9.5%
+stage 2, pass 3 (11 s): w0 0.974, L0 74.95, Lw 67.36 (q held at 13.88) | cost 0.1145, growth 16.2%, influence 1.48 dB
+
+stage 1, pass 4 (2 s): alpha 0.4435, I0 29.85 | cost 0.0396, tone growth 9.6%
+stage 2, pass 4 (11 s): w0 0.975, L0 75.26, Lw 67.21 (q held at 13.88) | cost 0.1147, growth 16.1%, influence 1.49 dB
+after stage 2:
+  w0 0.975: one octave r 0.815 RMSE 1.96 dB | quarter octave r 0.644 RMSE 1.53 dB | 1 kHz 60 dB: -5.12, -3.12 | 6 kHz 70 dB: +1.50
+  w0 0.000: one octave r 0.053 RMSE 9.89 dB | quarter octave r -0.134 RMSE 3.96 dB | 1 kHz 60 dB: +8.27, +0.96 | 6 kHz 70 dB: +11.31
+  loudness error (%), constant 9.3e-06, by frequency 250 Hz to 6 kHz:
+   tone       24   19   16    9   22   16   21   19   17
+   quarter    23   14   15   10   13   13   12   14   15
+   octave     30   20   16   13   16   19   17   13   16
+  alpha 0.4435 I0 29.85 q 13.883 w0 0.9749 L0 75.26 Lw 67.21 | G 0.452 0.716 0.861 0.999 1.028 0.937 1.041 1.236 0.848 1.798
+stage 4 (2 s): G anchors 0.613 0.760 0.881 0.999 0.921 1.001 0.875 1.111 0.879 1.075
+stage 5 (20 s): scales a 1.02 0.98 1.00 1.02 1.06 1.04 1.07 1.13 1.13 1.15 | b 0.99 1.02 1.00 0.96 0.91 0.92 0.85 0.78 0.69 0.64 | c 1.00 0.99 1.00 0.99 0.97 0.98 0.97 0.94 0.91 0.89
+after stage 5:
+  w0 0.975: one octave r 0.590 RMSE 2.71 dB | quarter octave r 0.604 RMSE 1.57 dB | 1 kHz 60 dB: -5.37, -3.12 | 6 kHz 70 dB: -3.56
+  w0 0.000: one octave r -0.113 RMSE 9.71 dB | quarter octave r -0.168 RMSE 3.95 dB | 1 kHz 60 dB: +8.15, +0.97 | 6 kHz 70 dB: +9.89
+  loudness error (%), constant 9.74e-06, by frequency 250 Hz to 6 kHz:
+   tone       15   17   17   10   15   14   12    9   17
+   quarter    11   10   14   12   10    6    4    5   13
+   octave     17   17   16   11   13   15   10   14   35
+  alpha 0.4435 I0 29.85 q 13.883 w0 0.9749 L0 75.26 Lw 67.21 | G 0.613 0.760 0.881 0.999 0.921 1.001 0.875 1.111 0.879 1.075
+stage 6, start 1: w0 0.913, G(3k) 1.331, G(4k) 1.122, G(6k) 0.607, G(8k) 1.347 | cost 0.0953, growth 11.5%, influence 1.44 dB
+stage 6, start 2: w0 0.913, G(3k) 1.329, G(4k) 1.121, G(6k) 0.607, G(8k) 1.348 | cost 0.0953, growth 11.5%, influence 1.44 dB
+stage 6, start 3: w0 0.877, G(3k) 1.434, G(4k) 1.636, G(6k) 0.548, G(8k) 0.000 | cost 0.1028, growth 11.7%, influence 1.65 dB
+stage 6 (449 s): kept the start with cost 0.0953
+
+result:
+  w0 0.913: one octave r 0.851 RMSE 1.33 dB | quarter octave r 0.622 RMSE 1.57 dB | 1 kHz 60 dB: -4.30, -2.79 | 6 kHz 70 dB: +2.82
+  w0 0.000: one octave r 0.106 RMSE 9.76 dB | quarter octave r -0.140 RMSE 3.96 dB | 1 kHz 60 dB: +8.13, +0.97 | 6 kHz 70 dB: +11.49
+  loudness error (%), constant 8.54e-06, by frequency 250 Hz to 6 kHz:
+   tone       13   15   15    9   13   13   28    8   23
+   quarter    12   12   13    9    8    6   19    5   28
+   octave     18   17   14    9   12   11   19    7   25
+  alpha 0.4435 I0 29.85 q 13.883 w0 0.9133 L0 75.26 Lw 67.21 | G 0.613 0.760 0.881 0.999 0.921 1.001 1.331 1.122 0.607 1.347
+saved nea_letter_params.mat
