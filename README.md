@@ -2,7 +2,7 @@
 
 This repository holds what is needed to reproduce the figures of
 
-- the letter on the neural-ensemble averaging (NEA) model of loudness (S. T. Neely and Y. Shen, in preparation for JASA Express Letters), and
+- the letter "A neural-ensemble averaging model of why narrow-band sounds can be less loud than tones" (S. T. Neely and Y. Shen, in preparation for JASA Express Letters), and
 - the poster "A physiologically inspired neural-ensemble averaging model illustrates a possible origin of nonmonotonic bandwidth effects in loudness" (ARO MidWinter Meeting 2027).
 
 Both report the same model: 60 complex fourth-order gammatone filters on an ERB-rate scale, an envelope taken from the magnitude of the filter output, a sensitivity gain, place-dependent compression, a rate function, and a read-out across channels that blends a broad sum with a peak-weighted average under a level-dependent weight.

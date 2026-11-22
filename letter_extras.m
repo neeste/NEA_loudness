@@ -1,5 +1,5 @@
 function letter_extras()
-% LETTER_EXTRAS  Variants of the model for Section S5 of the supplement and for the Discussion of the letter.
+% LETTER_EXTRAS  Variants of the model for Section S6 of the supplement and for the Discussion of the letter.
 %   1 lateral suppression in the periphery (fraction 0.35 of the neighbors, Gaussian width 10 channels), alone and with the read-out
 %   2 weight gated by the model's own broad sum
 %   3 constant weight (no gate), and the same with three fiber classes whose knees are spread by 10, 100 and 1000
